@@ -1,0 +1,127 @@
+/* Google Fonts: Roboto */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+
+/* Background */
+body {
+  background: #252525;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+/* Title */
+h1 {
+  margin-top: 50px;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Add a glowing border to the input field */
+input[type="text"] {
+  padding: 10px;
+  margin: 20px;
+  width: 60%;
+  border-radius: 5px;
+  border: none;
+  background-color: #252525;
+  color: #fff;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px #007bff;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 10px #fff;
+}
+
+/* Generate button */
+#generate-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+#generate-button:hover {
+  background-color: #0062cc;
+}
+
+/* QR code */
+#qrcode {
+  margin: 50px auto;
+  width: fit-content;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  input[type="text"] {
+    width: 80%;
+  }
+
+  #generate-button {
+    font-size: 1rem;
+  }
+
+  #qrcode {
+    margin-top: 30px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input[type="text"] {
+    width: 90%;
+  }
+
+  #generate-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  #qrcode {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 0.8rem;
+  }
+}
+
+/* QR code animation */
+#qrcode {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+#qrcode.show {
+  opacity: 1;
+  transform: scale(1);
+}
